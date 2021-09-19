@@ -9,3 +9,5 @@ logs
 # IDE - VSCode
 .vscode/
 .env
+
+.DS_Store
