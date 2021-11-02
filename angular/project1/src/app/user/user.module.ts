@@ -4,6 +4,8 @@ import { AuthComponent } from './auth/auth.component';
 import { IfelseComponent } from './ifelse/ifelse.component';
 import { SwitchComponent } from './switch/switch.component';
 import { LoopComponent } from './loop/loop.component';
+import { DataTransferComponent } from './data-transfer/data-transfer.component';
+import { ChildComponent } from './data-transfer/child/child.component';
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { LoopComponent } from './loop/loop.component';
     AuthComponent,
     IfelseComponent,
     SwitchComponent,
-    LoopComponent
+    LoopComponent,
+    DataTransferComponent,
+    ChildComponent
   ],
   imports: [
     CommonModule
@@ -21,6 +25,7 @@ import { LoopComponent } from './loop/loop.component';
     IfelseComponent,
     SwitchComponent,
     LoopComponent,
+    DataTransferComponent,
   ],
 })
 export class UserModule { }
