@@ -1,0 +1,11 @@
+<div *ngIf="isValid; then trueTemplate else falseTemplate">
+  Here is never showing
+</div>
+
+<ng-template #trueTemplate>
+  True value
+</ng-template>
+
+<ng-template #falseTemplate>
+  False value
+</ng-template>

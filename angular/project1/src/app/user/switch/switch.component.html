@@ -1,0 +1,8 @@
+<container-element [ngSwitch]="switchValue">
+  <!-- the same view can be shown in more than one case -->
+  <ng-container *ngSwitchCase="'one'"> switch satement one </ng-container>
+  <ng-container *ngSwitchCase="'two'"> switch satement two </ng-container>
+  <ng-container *ngSwitchCase="'three'"> switch satement three </ng-container>
+  <!--default case when there are no matches -->
+  <ng-container *ngSwitchDefault>no switch match , default value </ng-container>
+</container-element>
