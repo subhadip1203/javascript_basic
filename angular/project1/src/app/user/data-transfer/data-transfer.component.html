@@ -1,4 +1,4 @@
 
 <div>
-  <app-child [myProps]="myProperty"></app-child>
+  <app-child [myProps]="myProperty" (parentFunc)="myFunc($event)"></app-child>
 </div>
