@@ -10,9 +10,14 @@ export class DataTransferComponent implements OnInit {
     name: 'subhadip'
   }
 
-  myFunc(input: any){
+  myFunc(input: any ){
     console.log(input)
   }
+
+  myfunc2(input: any){
+    console.log(input)
+  }
+  
   constructor() { }
 
   ngOnInit(): void {

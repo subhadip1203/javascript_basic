@@ -9,13 +9,16 @@ export class ChildComponent implements OnInit {
 
   @Input() myProps: any;
 
-  @Output() parentFunc:EventEmitter<any>= new EventEmitter()
+  @Output() parentFunc:   EventEmitter<any> = new EventEmitter()
+  @Output() newItemEvent: EventEmitter<any> = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
-
     this.parentFunc.emit("onload child component")
+  }
+  addNewItem(value: string) {
+    this.newItemEvent.emit(value);
   }
 
 }
