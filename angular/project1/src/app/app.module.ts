@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { HttpreqComponent } from './httpreq/httpreq.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutusComponent,
-    ContactusComponent
+    ContactusComponent,
+    HttpreqComponent
   ],
   imports: [
     BrowserModule,
