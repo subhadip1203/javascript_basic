@@ -7,13 +7,15 @@ import { UserModule } from './user/user.module';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HttpreqComponent } from './httpreq/httpreq.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutusComponent,
     ContactusComponent,
-    HttpreqComponent
+    HttpreqComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
