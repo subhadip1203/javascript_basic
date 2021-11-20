@@ -21,6 +21,11 @@ component : template (HTML)  + metaData (ts file) + css + spec
 
 
 
+### custom directives
+ng g directive customedesign
+
+
+
 
 
 

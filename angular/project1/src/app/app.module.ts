@@ -8,6 +8,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HttpreqComponent } from './httpreq/httpreq.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { CustomedesignDirective } from './customedesign.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AboutusComponent,
     ContactusComponent,
     HttpreqComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CustomedesignDirective
   ],
   imports: [
     BrowserModule,
