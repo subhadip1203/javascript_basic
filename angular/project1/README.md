@@ -25,6 +25,14 @@ component : template (HTML)  + metaData (ts file) + css + spec
 ng g directive customedesign
 
 
+### services
+the main task of service is : share data between multiple components
+services are not module dependent or component dependent
+
+service to store the data
+components will get data from service
+
+
 
 
 
