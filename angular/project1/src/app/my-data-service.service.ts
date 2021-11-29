@@ -6,4 +6,11 @@ import { Injectable } from '@angular/core';
 export class MyDataServiceService {
 
   constructor() { }
+
+  getData(){
+    return {
+      name: 'subhadip',
+      age: 20,
+    }
+  }
 }

@@ -32,6 +32,8 @@ services are not module dependent or component dependent
 service to store the data
 components will get data from service
 
+ng g service my_data_service
+
 
 
 
