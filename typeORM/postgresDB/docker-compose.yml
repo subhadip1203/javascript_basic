@@ -1,0 +1,68 @@
+# version: '3.5'
+
+# services:
+#   postgres:
+#     container_name: postgres_container
+#     image: postgres
+#     environment:
+#       POSTGRES_USER: postgres
+#       POSTGRES_PASSWORD: test123
+#       POSTGRES_DB: test_db
+#       PGDATA: /data/postgres
+#     volumes:
+#       - ./postgresData:/data/postgres
+#     ports:
+#       - 5432:5432
+#     networks:
+#       - postgres
+#     restart: unless-stopped
+  
+#   pgadmin:
+#     container_name: pgadmin_container
+#     image: dpage/pgadmin4
+#     environment:
+#       PGADMIN_DEFAULT_EMAIL: subhadip1203dev@gmail.com
+#       PGADMIN_DEFAULT_PASSWORD: fake123
+#       PGADMIN_CONFIG_SERVER_MODE: 'False'
+#     volumes:
+#        - ./pgadminData:/var/lib/pgadmin
+#     ports:
+#       - 8080:80
+#     networks:
+#       - postgres
+#     restart: unless-stopped
+
+# networks:
+#   postgres:
+#     driver: bridge
+
+# volumes:
+#     postgres:
+#     pgadmin:
+
+
+version: '3.8'
+services:
+  db:
+    container_name: pg_container
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: test_db
+    volumes:
+      - ./postgresData:/data/postgres
+    ports:
+      - "5432:5432"
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: subhadip1203dev@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: fake123
+    volumes:
+      - ./pgadminData:/var/lib/pgadmin
+    ports:
+      - "5050:80"
