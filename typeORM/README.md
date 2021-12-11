@@ -25,5 +25,6 @@ export class  {
 }
 
 ### typeorm command
-command : npm run typeorm schema:drop
+drop all the tables command : npm run typeorm schema:drop
+sync all the tables command : npm run typeorm schema:sync
 
