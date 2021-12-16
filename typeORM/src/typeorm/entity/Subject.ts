@@ -1,10 +1,15 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, PrimaryColumn , CreateDateColumn , UpdateDateColumn} from "typeorm";
 
 @Entity('my_subjects')
 export class Subject {
 
   @PrimaryGeneratedColumn()
   id: number;
+
+  @PrimaryColumn({
+    type: 'uuid'
+  })
+  second_id: string
 
   @Column({
       unique: true,
@@ -33,4 +38,10 @@ export class Subject {
     race: string,
     age: number,
   }
+
+  @CreateDateColumn()
+  created_at: Date;
+
+  @UpdateDateColumn()
+  updated_at: Date;
 }
