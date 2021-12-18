@@ -1,5 +1,7 @@
-import {Entity, PrimaryGeneratedColumn, Column, OneToMany, Transaction} from "typeorm";
-import { Transaction } from './transaction'
+import {Entity, PrimaryGeneratedColumn, Column, OneToMany , ManyToMany} from "typeorm";
+
+import { Transaction } from "./Transaction";
+import { Banker} from './Banker'
 
 @Entity('my_user')
 export class User {
@@ -21,5 +23,12 @@ export class User {
         transaction => transaction.client
     )
     transactions: Transaction[];
+
+
+    @ManyToMany(
+        () => Banker, 
+        banker => banker.categories
+    )
+    bankers: Banker[];
 
 }

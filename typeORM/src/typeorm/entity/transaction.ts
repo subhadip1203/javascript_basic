@@ -12,7 +12,7 @@ export class Transaction {
   
   @ManyToOne(
     ()=> User,
-    client => client.transaction
+    client => client.transactions
   )
   @JoinColumn({
     name: 'userId'
