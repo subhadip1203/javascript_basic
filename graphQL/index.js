@@ -1,5 +1,25 @@
 const { ApolloServer , gql } = require('apollo-server');
 
+const FakeData =[
+  {
+    id: 'dafewsf424rn23',
+    name: 'product 1',
+    description: 'product description 1',
+    price: 99.99,
+    quantity: 10,
+    isActive: true
+  },
+  {
+    id: 'da3re564ewsf424rn23',
+    name: 'product 2',
+    description: 'product description 2',
+    price: 199.99,
+    quantity: 20,
+    isActive: false
+  }
+]
+
+
 const typeDefs = gql `
 
   type Product {
@@ -20,6 +40,7 @@ const typeDefs = gql `
     myStringArr: [String]
     noNullStringArr: [String!]!
     products: [Product!]!
+    product(id: ID!) : Product
   }
 `
 
@@ -51,23 +72,15 @@ const resolvers =  {
     },
 
     products: ()=>{
-      return [
-        {
-          name: 'product 1',
-          description: 'product description 1',
-          price: 99.99,
-          quantity: 10,
-          isActive: true
-        },
-        {
-          name: 'product 2',
-          description: 'product description 2',
-          price: 199.99,
-          quantity: 20,
-          isActive: false
-        }
-      ]
+      return FakeData
     },
+
+    product: (parent , args , context) => {
+      console.log(args);
+      const product = FakeData.find( v => v.id === args.id)
+      if (!product) return null
+      return product
+    }
   }
 }
 
