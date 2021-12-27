@@ -1,7 +1,7 @@
 import express = require('express');
 const app = express()
 const PORT = 3000
-
+import {clientRoutes} from './routes'
 
 import "reflect-metadata";
 import {createConnection} from "typeorm";
@@ -11,6 +11,9 @@ const mainFunc = async () =>{
     try{
         await createConnection();
         console.log("DB connection is successful")
+
+        app.use(express.json());
+        app.use(clientRoutes);
         app.listen( PORT , () =>  console.log("app running http://localhost:"+PORT) )
     }
     catch(err){

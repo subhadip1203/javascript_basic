@@ -2,9 +2,10 @@
 
 install type orm                  : npm i  typeorm --save
 extra dependency for typeORM      : npm install reflect-metadata --save
-install db packages               : npm install pg --save
+install db packages               : npm install pg --save 
 
-install dev dependencies          : npm i -D typescript@latest ts-node@latest
+install dev dependencies          : npm i -D typescript@latest ts-node@latest 
+install dev dependencies          : npm i ts-node-dev --save-dev
 
 ### in package.json file:
 
