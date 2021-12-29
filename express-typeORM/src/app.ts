@@ -1,9 +1,11 @@
 import * as express from "express";
 import {Request, Response} from "express";
 
+import { mainFunc } from '../typeORM/index'
 import {getRepository} from "typeorm";
 import {User} from '../typeORM/entity/User'
 
+mainFunc();
 // create and setup express app
 const app = express();
 app.use(express.json());

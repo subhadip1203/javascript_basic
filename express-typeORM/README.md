@@ -30,4 +30,5 @@ npm i -D ts-node  @types/node @types/express
 ### install require packages for type-ORM
 npm i typeorm pg reflect-metadata --save
 
-->reflect-metadata is required to make decorators to work properly
+### add typeORm script in package.json
+"typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js"

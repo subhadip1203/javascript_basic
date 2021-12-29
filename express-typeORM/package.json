@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+
+  "typeOrmConfig": {
+    "config": "./typeORM/ormconfig.json"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typeorm": "typeorm --config typeORM/ormconfig.json"
   },
   "keywords": [],
   "author": "",
@@ -21,4 +26,5 @@
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.2.41"
   }
+  
 }
