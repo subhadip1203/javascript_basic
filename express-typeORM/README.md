@@ -31,4 +31,7 @@ npm i -D ts-node  @types/node @types/express
 npm i typeorm pg reflect-metadata --save
 
 ### add typeORm script in package.json
-"typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js"
+"typeorm": "typeorm --config typeORM/ormconfig.json"
+
+drop all the tables command : npm run typeorm schema:drop
+sync all the tables command : npm run typeorm schema:sync

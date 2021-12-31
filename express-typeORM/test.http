@@ -1,2 +1,2 @@
 ###
-GET http://localhost:3000/api/client
+GET http://localhost:3000/

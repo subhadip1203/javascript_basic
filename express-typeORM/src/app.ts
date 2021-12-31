@@ -5,6 +5,8 @@ import { mainFunc } from '../typeORM/index'
 import {getRepository} from "typeorm";
 import {User} from '../typeORM/entity/User'
 
+import routes from './routes';
+
 mainFunc();
 // create and setup express app
 const app = express();
@@ -17,25 +19,7 @@ app.get("/", async function(req: Request, res: Response) {
   res.send(data)
 });
 
-app.get("/users", function(req: Request, res: Response) {
-    // here we will have logic to return all users
-});
-
-app.get("/users/:id", function(req: Request, res: Response) {
-    // here we will have logic to return user by id
-});
-
-app.post("/users", function(req: Request, res: Response) {
-    // here we will have logic to save a user
-});
-
-app.put("/users/:id", function(req: Request, res: Response) {
-    // here we will have logic to update a user by a given user id
-});
-
-app.delete("/users/:id", function(req: Request, res: Response) {
-    // here we will have logic to delete a user by a given user id
-});
+app.use('/api', routes);
 
 const PORT = 3000
 // start express server
