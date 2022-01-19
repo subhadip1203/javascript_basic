@@ -1,0 +1,13 @@
+###
+GET http://localhost:3000
+
+
+###  send email
+POST http://localhost:3000/send_email
+content-type: application/json
+
+{
+  "test": 1
+}
+
+

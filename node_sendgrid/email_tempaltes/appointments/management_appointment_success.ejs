@@ -1,0 +1,80 @@
+<%- include('../includes/header'); %>
+
+<tr>
+	<td
+		style="
+			padding: 35px 30px 11px 30px;
+			font-size: 0;
+			background-color: #ffffff;
+			border-bottom: 1px solid #f0f0f5;
+			border-color: rgba(201, 201, 207, 0.35);
+		"
+	>
+		<!--[if mso]>
+        <table role="presentation" width="100%">
+          <tr>
+            <td style="width:145px;" align="left" valign="top">
+              <![endif]-->
+		<div
+			class="col-sml"
+			style="
+				display: inline-block;
+				width: 100%;
+				max-width: 145px;
+				vertical-align: top;
+				text-align: left;
+				font-family: Arial, sans-serif;
+				font-size: 14px;
+				color: #363636;
+			"
+		>
+			<img
+				src="https://assets.codepen.io/210284/icon.png"
+				width="115"
+				alt=""
+				style="width: 115px; max-width: 80%; margin-bottom: 20px"
+			/>
+		</div>
+		<!--[if mso]>
+                </td>
+                <td style="width:395px;padding-bottom:20px;" valign="top">
+                <![endif]-->
+		<div
+			class="col-lge"
+			style="
+				display: inline-block;
+				width: 100%;
+				max-width: 395px;
+				vertical-align: top;
+				padding-bottom: 20px;
+				font-family: Arial, sans-serif;
+				font-size: 16px;
+				line-height: 22px;
+				color: #363636;
+			"
+		>
+			<p style="margin-top: 0; margin-bottom: 12px">
+			Hi Team, 
+			</p>
+			<p style="margin-top: 0; margin-bottom: 12px">
+				We received  payment  for New Appointment.
+			</p>
+			<p style="margin-top: 0; margin-bottom: 18px">
+				<b> Client : <%= name %> </b>
+				<br>
+				<b> Date : <%= date %> </b>
+				<br>
+				<b> Slot : <%= slot %> </b>
+			</p>
+			
+		</div>
+		<!--[if mso]>
+        </td>
+        </tr>
+      </table>
+    <![endif]-->
+	</td>
+</tr>
+
+
+<%- include('../includes/footer.ejs'); %>
