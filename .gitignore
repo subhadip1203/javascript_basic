@@ -11,3 +11,7 @@ logs
 .env
 
 .DS_Store
+
+# ignoring postgress and pgadmin docker volume
+pgadminData/
+postgresData/
