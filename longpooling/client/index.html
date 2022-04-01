@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    async function subscribe() {
+      let response = await fetch("http://localhost:3000/messages");
+
+      if (response.status == 502) {
+        // Status 502 is a connection timeout error,
+        // may happen when the connection was pending for too long,
+        // and the remote server or a proxy closed it
+        // let's reconnect
+        await subscribe();
+      } else if (response.status != 200) {
+        // An error - let's show it
+        console.log(response.statusText);
+        // Reconnect in one second
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        await subscribe();
+      } else {
+        // Get and show the message
+        let message = await response.text();
+        console.log(message);
+        // Call subscribe() again to get the next message
+        await subscribe();
+      }
+    }
+
+    subscribe();
+  </script>
+</body>
+</html>
